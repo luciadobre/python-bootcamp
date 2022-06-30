@@ -12,6 +12,7 @@ def blackjack():
     dealer_score = 0
 
     def player_deal(score):
+        """Deal a random player card. Return score. Add score of the card to player score."""
         player_cards.append(random.choice(cards))
         score += player_cards[-1]
         while score > 21 and 11 in player_cards:
@@ -22,6 +23,7 @@ def blackjack():
         return score
 
     def dealer_deal(score):
+        """Deal a random dealer card. Return score. Add score of the card to dealer score."""
         dealer_cards.append(random.choice(cards))
         score += dealer_cards[-1]
         while score > 21 and 11 in dealer_cards:

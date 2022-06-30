@@ -44,7 +44,7 @@ def make_coffee(drink):
         if money < cost:
             print(f'Not enough! You entered ${money} and the cost is ${cost}. Coins refunded')
         elif money >= cost:
-            change = money - cost
+            change = round(money - cost, 2)
             print(f"Here's your change: ${change}")
             resources['water'] -= menu_water
             resources['milk'] -= menu_milk
